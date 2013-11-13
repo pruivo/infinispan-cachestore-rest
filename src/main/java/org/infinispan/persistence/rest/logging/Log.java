@@ -55,11 +55,4 @@ public interface Log extends org.infinispan.util.logging.Log {
 
    @Message(value = "Error loading entries from remote server", id = 22005)
    PersistenceException errorLoadingRemoteEntries(@Cause Exception e);
-
-   @Message(value = "Could not find migration data in cache %s", id = 22006)
-   CacheException missingMigrationData(String name);
-
-   @LogMessage(level = WARN)
-   @Message(value = "Could not migrate key %s", id = 22007)
-   void keyMigrationFailed(String key, @Cause Throwable cause);
 }
